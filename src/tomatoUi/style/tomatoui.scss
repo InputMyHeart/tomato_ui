@@ -1,0 +1,160 @@
+// 颜色
+$color-primary: #498ff2;
+$color-main: #00a19d; // 主色调
+$color-warning: #ffb344; // 警告
+$color-danger: #e05d5d; // 危险
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+// 背景
+$background-page: #f5f5f5;
+
+// 字体
+$text-font-12: 12px;
+$text-font-14: 14px;
+$text-font-16: 16px;
+$text-font-18: 18px;
+$text-font-20: 20px;
+// 圆角
+$border-radius-5: 5px;
+$border-radius-10: 10px;
+$border-radius-15: 15px;
+$border-round: 50%;
+
+@mixin radius($top, $bottom) {
+    border-radius: $top $top $bottom $bottom;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+// Flex布局
+.flex {
+    display: flex;
+}
+.flex-block {
+    display: block;
+}
+.flex-inline-block {
+    display: inline-block;
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+.flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-around-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-end-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.flex-flex-center {
+    display: flex;
+    align-items: center;
+}
+
+// 通用
+.iconfont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// page
+.tm-page {
+    min-height: 100vh;
+    padding-bottom: 70px;
+    background-color: $background-page;
+}
+
+// tm-notify
+.tm-notify {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    line-height: 36px;
+    font-size: $text-font-14;
+
+    &-primary {
+        color: white;
+        background-color: $color-primary;
+    }
+
+    &-success {
+        color: white;
+        background-color: $color-main;
+    }
+
+    &-danger {
+        color: white;
+        background-color: $color-danger;
+    }
+
+    &-warn {
+        color: white;
+        background-color: $color-warning;
+    }
+
+    &-enter-animation {
+        animation: enter-animation 1s ease-out;
+    }
+
+    &-out-animation {
+        animation: out-animation 1s ease-in;
+    }
+
+    @keyframes enter-animation {
+        from {
+            top: -100%;
+        }
+        to {
+            top: 0;
+        }
+    }
+
+    @keyframes out-animation {
+        from {
+            top: 0;
+        }
+        to {
+            top: -100%;
+        }
+    }
+}
