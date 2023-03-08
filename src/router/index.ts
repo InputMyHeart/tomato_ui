@@ -58,6 +58,14 @@ const router = createRouter({
             title: "按钮"
           },
           component: () => import("../views/component/button.vue")
+        },
+        {
+          path: "cell",
+          name: "Cell",
+          meta: {
+            title: "单元栏"
+          },
+          component: () => import("../views/component/cell.vue")
         }
       ]
     }

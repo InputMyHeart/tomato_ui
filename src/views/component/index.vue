@@ -28,7 +28,8 @@ const state = reactive({
     {
       name: '单元栏',
       title: 'Cell',
-      icon: ''
+      icon: '',
+      path: '/comp/cell'
     },
     {
       name: '弹窗',

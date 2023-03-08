@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { reactive, defineProps, computed, onMounted } from 'vue'
+import { reactive, computed, onMounted } from 'vue'
 
 const props = defineProps({
   zIndex: {

@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import { defineProps, inject, computed } from 'vue'
+import { inject, computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 
 const props = defineProps({
