@@ -31,6 +31,10 @@ $border-round: 50%;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 // Flex布局
@@ -92,6 +96,7 @@ $border-round: 50%;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 
 // page
 .tm-page {
